@@ -8,6 +8,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TasksListComponent } from './tasks/tasks-list/tasks-list.component';
 import { TasksDetailComponent } from './tasks/tasks-detail/tasks-detail.component';
 import { TasksItemComponent } from './tasks/tasks-list/tasks-item/tasks-item.component';
+import { DaylogComponent } from './daylog/daylog.component';
+import { DaylogEditComponent } from './daylog/daylog-edit/daylog-edit.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { TasksItemComponent } from './tasks/tasks-list/tasks-item/tasks-item.com
     TasksListComponent,
     TasksDetailComponent,
     TasksItemComponent,
+    DaylogComponent,
+    DaylogEditComponent,
   ],
   imports: [
     BrowserModule
