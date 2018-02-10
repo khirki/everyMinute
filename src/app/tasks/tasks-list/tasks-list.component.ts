@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../task.model';
 
 @Component({
   selector: 'app-tasks-list',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks-list.component.css']
 })
 export class TasksListComponent implements OnInit {
+
+  tasks: Task[] = [
+    new Task('wykąpać Szprota', "Do kąpieli potrzebna jest duża wanna", 'pets')
+  ];
 
   constructor() { }
 
