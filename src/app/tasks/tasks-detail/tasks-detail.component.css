@@ -1,0 +1,10 @@
+#buttons-holder{
+    position: relative;
+}
+.horizontal{
+    position: absolute; 
+    top: 0;
+}
+#task-detail-holder{
+    margin-top: 30px;
+}
