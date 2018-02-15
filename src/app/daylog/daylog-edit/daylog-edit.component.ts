@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-daylog-edit',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DaylogEditComponent implements OnInit {
 
+  @Output() instantTaskCreated = new EventEmitter<{ taskName: string, taskLength: number }>();
+  instantTaskName = 'New task for today';
+  instantTaskLength = 10;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onInstantTaskCreated(taskData: { taskName: string, taskLength: number }) {
+    this.instantTaskCreated.emit({
+      taskName: this.instantTaskName,
+      taskLength: this.instantTaskLength
+    });
+  }
 }

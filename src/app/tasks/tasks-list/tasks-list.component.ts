@@ -9,7 +9,7 @@ import { Task } from '../task.model';
 export class TasksListComponent implements OnInit {
 
   tasks: Task[] = [
-    new Task('wykąpać Szprota', "Do kąpieli potrzebna jest duża wanna", 'pets', 30)
+    new Task('wykąpać Szprota', 30, "Do kąpieli potrzebna jest duża wanna", 'pets')
   ];
 
   constructor() { }

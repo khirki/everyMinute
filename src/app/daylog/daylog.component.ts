@@ -9,13 +9,20 @@ import { Task } from '../tasks/task.model';
 export class DaylogComponent implements OnInit {
 
   tasks: Task[] = [
-    new Task("tralalal", 'elo siema', 'pets', 10),
-    new Task("łohohoh", 'xddd', 'pets', 20),
+    new Task("tralalal", 10),
+    new Task("łohohoh", 20),
   ];
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  onAddedInstantTask(taskData: { taskName: string, taskLength: number }) {
+    this.tasks.push(
+      new Task(taskData.taskName, taskData.taskLength)
+    );
+  }
+
 
 }

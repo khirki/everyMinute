@@ -4,7 +4,7 @@ export class Task {
     public iconName: string;
     public length: number;
 
-    constructor(name: string, description: string, iconName: string, length: number) {
+    constructor(name: string, length: number, description: string = '', iconName: string = 'pets' ) {
         this.name = name;
         this.description = description;
         this.iconName = iconName;
