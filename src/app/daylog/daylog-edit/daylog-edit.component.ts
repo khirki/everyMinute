@@ -16,7 +16,7 @@ export class DaylogEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  onInstantTaskCreated(taskData: { taskName: string, taskLength: number }) {
+  onInstantTaskCreated() {
     this.instantTaskCreated.emit({
       taskName: this.instantTaskName,
       taskLength: this.instantTaskLength
