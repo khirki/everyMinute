@@ -1,0 +1,14 @@
+.task-item{
+    border: 1px solid lightgray;
+    padding: 15px;
+}
+.task-item i{
+    font-size: 80px;
+}
+.task-item .row{
+    margin-bottom: 0;
+}
+.task-item:hover{
+    background-color: lavender;
+    cursor: pointer;
+}

@@ -1,10 +1,9 @@
-<app-header></app-header>
+<app-header (linkSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row" id="tasks-daylog-container">
     <div class="col s12">
-      <app-tasks></app-tasks>
-      <hr>
-      <app-daylog></app-daylog>
+      <app-tasks *ngIf="loadedLink ==='tasks'"></app-tasks>
+      <app-daylog *ngIf="loadedLink ==='daylog'"></app-daylog>
     </div>
   </div>
 </div>

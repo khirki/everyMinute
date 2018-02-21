@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  loadedLink = 'tasks';
+
+  onNavigate(link: string) {
+    this.loadedLink = link;
+  }
 }

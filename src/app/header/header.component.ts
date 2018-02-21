@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 
 declare var $: any;
 
@@ -9,12 +9,18 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() linkSelected = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
     $(document).ready(function () {
       $(".button-collapse").sideNav();
     });
+  }
+
+  onSelect(link: string) {
+    this.linkSelected.emit(link);
   }
 
 }
